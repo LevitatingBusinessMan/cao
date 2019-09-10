@@ -8,6 +8,3 @@ git clone https://github.com/LevitatingBusinessMan/cao
 cd cao
 sudo make
 ```
-
-## Example
-![gif](http://i.imgur.com/drDyn5N.gif)
