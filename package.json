@@ -1,5 +1,5 @@
 {
-  "name": "cao",
+  "name": "cao_pulse",
   "version": "1.0.0",
   "description": "Change Audio Output",
   "main": "cao.js",
