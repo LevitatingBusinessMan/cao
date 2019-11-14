@@ -1,0 +1,27 @@
+{
+  "name": "cao",
+  "version": "1.0.0",
+  "description": "Change Audio Output",
+  "main": "cao.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "cao": "cao.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LevitatingBusinessMan/cao.git"
+  },
+  "keywords": [
+    "audio",
+    "output",
+    "device"
+  ],
+  "author": "LevitatingBusinessMan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LevitatingBusinessMan/cao/issues"
+  },
+  "homepage": "https://github.com/LevitatingBusinessMan/cao#readme"
+}
