@@ -1,5 +1,12 @@
 #!/usr/bin/node
 
+if (process.argv.includes("--help")) {
+	console.log("(Change Audio Output)")
+	console.log("Routes all pulseaudio sink-inputs to a specific sink via a selection menu")
+	console.log("Usage: cao")
+	return
+}
+
 const {exec} = require("child_process")
 const fs = require("fs")
 const err_wstream = fs.createWriteStream("/tmp/cao.stderr");
@@ -7,11 +14,10 @@ const err_wstream = fs.createWriteStream("/tmp/cao.stderr");
 //Get sink list
 exec("pactl list short sinks", (err, stdout) => {
 	if (err) {
-		console.log("An error occured retrieving sink list")
+		console.log("An error occured retrieving sink-input list (/tmp/cao.stderr)")
 		err_wstream.write(err + "\n")
 		process.exit(1)
 	}
-
 	const outputLines = stdout.split("\n")
 
 	//remove last empty line
@@ -112,8 +118,9 @@ exec("pactl list short sinks", (err, stdout) => {
 	const route_input = (index) =>
 		exec("pactl list short sink-inputs", (err, stdout) => {
 			if (err) {
-				return console.log("An error occured retrieving sink-input list (/tmp/cao.stderr)")
+				console.log("An error occured retrieving sink-input list (/tmp/cao.stderr)")
 				err_wstream.write(err + "\n")
+				process.exit(1)
 			}
 			
 			const outputLines = stdout.split("\n")

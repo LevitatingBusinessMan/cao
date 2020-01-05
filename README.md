@@ -6,5 +6,12 @@ First make sure [NodeJS](https://nodejs.org/) is installed. Then run these 3 com
 ```SH
 git clone https://github.com/LevitatingBusinessMan/cao
 cd cao
-sudo make
+sudo make install
+```
+
+#### OR
+
+via NPM:
+```SH
+npm i cao_pulse -g
 ```
