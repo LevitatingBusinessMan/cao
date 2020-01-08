@@ -15,3 +15,10 @@ via NPM:
 ```SH
 npm i cao_pulse -g
 ```
+
+#### OR
+
+via the AUR on archlinux:
+```SH
+yay -S cao
+```
